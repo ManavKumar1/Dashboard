@@ -1,0 +1,110 @@
+.Navbar-Main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.579);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 20px;
+
+  .companyLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    .FaHover {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .FaHover:hover {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .Navbar-Menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+    margin: 50px;
+    justify-content: flex-end;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #007bff;
+      }
+
+      .Navbar-userPhoto {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .Navbar-Menu {
+      gap: 10px;
+
+      li {
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .companyLogo {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .Navbar-Main {
+      padding: 0 10px;
+    }
+
+    .Navbar-Menu {
+      li {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .companyLogo {
+      gap: 5px;
+
+      h1 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
